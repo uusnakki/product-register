@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@harkka.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ht.TuoteDialogController">
+   <bottom>
+      <BorderPane prefHeight="38.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <right>
+            <Button mnemonicParsing="false" onAction="#keyOKDialog" text="OK" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets right="50.0" />
+               </BorderPane.margin>
+            </Button>
+         </right>
+         <left>
+            <Button mnemonicParsing="false" onAction="#keyPeruuta" text="Peruuta" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets left="400.0" />
+               </BorderPane.margin>
+            </Button>
+         </left>
+         <bottom>
+            <Label fx:id="labelVirheMuokkaus" prefHeight="40.0" prefWidth="192.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </bottom>
+   <center>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Valmistaja:" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Valmistusvuosi:" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Hinta:" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Varastomäärä:" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Koko/pituus:" GridPane.rowIndex="5">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text="Nimi:">
+               <GridPane.margin>
+                  <Insets left="70.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="editNimi" GridPane.columnIndex="1" />
+            <TextField fx:id="editValmistaja" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="editVuosi" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="editHinta" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="editMaara" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="editKP" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <Label text="Tuote" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+   </top>
+</BorderPane>
