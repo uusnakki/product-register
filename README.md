@@ -1,1 +1,2 @@
-"# product-register" 
+Simple product register, done along CS2-course
+
